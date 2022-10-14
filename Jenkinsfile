@@ -1,5 +1,10 @@
 pipeline{
-	
+	    
+    tools{
+        jdk 'myjava'
+        maven 'mvnn'
+    }
+
     agent { label 'kslave1' }
         
         stages{
