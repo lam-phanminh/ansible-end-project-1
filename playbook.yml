@@ -1,0 +1,13 @@
+---
+- hosts: kslave1
+  become: true 
+  tasks:
+    - name: Install nginx 
+      apt:
+        name: '{{ item }}'
+        state: present
+      loop: 
+        - python3
+        - openssh-server 
+        - git
+    
