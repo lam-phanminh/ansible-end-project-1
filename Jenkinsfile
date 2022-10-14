@@ -16,8 +16,9 @@ pipeline{
             stage('Install tools by ansible'){
 	    
                 steps{
-                    // ansiblePlaybook credentialsId: 'root-ansible', installation: 'ansible-kslave1', inventory: 'inventory', playbook: 'playbook.yml'
-                    sh 'shellansible-playbook -i inventory playbook.yml'
+                    
+                    ansiblePlaybook disableHostKeyChecking: true, installation: 'ansible-kslave1', inventory: 'inventory', playbook: 'playbook.yml'
+ 
                 }
             
             }
