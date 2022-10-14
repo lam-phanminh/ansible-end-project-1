@@ -20,14 +20,14 @@ pipeline{
             
             }
 
-            // stage('Install tools by ansible'){
+            stage('Install tools by ansible'){
 	    
-            //     steps{
+                steps{
                     
-            //         ansiblePlaybook disableHostKeyChecking: true, installation: 'ansible-kslave1', inventory: 'inventory', playbook: 'playbook.yml'
- 
-            //     }
+                    // ansiblePlaybook disableHostKeyChecking: true, installation: 'ansible-kslave1', inventory: 'inventory', playbook: 'playbook.yml'
+                    sh 'pwd'
+                }
             
-            // }
+            }
         }
 }
