@@ -25,7 +25,7 @@ pipeline{
                 steps{
                     
                     // ansiblePlaybook disableHostKeyChecking: true, installation: 'ansible-kslave1', inventory: 'inventory', playbook: 'playbook.yml'
-                    sh 'pwd'
+                    sh 'chmod 755 /var/lib/jenkins/workspace/Ansible/*'
                     sh 'ansible-playbook playbook'
                 }
             
