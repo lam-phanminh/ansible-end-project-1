@@ -27,7 +27,8 @@ pipeline{
                     // ansiblePlaybook disableHostKeyChecking: true, installation: 'ansible-kslave1', inventory: 'inventory', playbook: 'playbook.yml'
                     // sh 'chmod 755 /var/lib/jenkins/workspace/Ansible/*'
                     // sh 'ls -lah'
-                    sh 'ansible-playbook /var/lib/jenkins/workspace/Ansible/playbook'
+                    // sh 'ansible-playbook /var/lib/jenkins/workspace/Ansible/playbook'
+                    sh 'ifconfig'
                 }
             
             }
