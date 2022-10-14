@@ -26,6 +26,7 @@ pipeline{
                     
                     // ansiblePlaybook disableHostKeyChecking: true, installation: 'ansible-kslave1', inventory: 'inventory', playbook: 'playbook.yml'
                     sh 'pwd'
+                    sh 'ansible-playbook playbook'
                 }
             
             }

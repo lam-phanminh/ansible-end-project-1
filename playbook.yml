@@ -1,5 +1,5 @@
 ---
-- hosts: kslave1
+- hosts: localhost
   become: true 
   tasks:
     - name: Install tools
