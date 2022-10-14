@@ -14,18 +14,20 @@ pipeline{
                 steps{
 		            echo 'cloning..'
                     git 'https://github.com/lam-phanminh/ansible-end-project-1.git'
+                    sh 'pwd'
+                    sh 'whoami'
                 }
             
             }
 
-            stage('Install tools by ansible'){
+            // stage('Install tools by ansible'){
 	    
-                steps{
+            //     steps{
                     
-                    ansiblePlaybook disableHostKeyChecking: true, installation: 'ansible-kslave1', inventory: 'inventory', playbook: 'playbook.yml'
+            //         ansiblePlaybook disableHostKeyChecking: true, installation: 'ansible-kslave1', inventory: 'inventory', playbook: 'playbook.yml'
  
-                }
+            //     }
             
-            }
+            // }
         }
 }
